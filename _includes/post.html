@@ -1,13 +1,13 @@
 <div class="page-header">
   <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
 </div>
-	
+
 <article>
 
 	<div class="col-sm-10">
 	 <span class="post-date">
 	   {% assign d = page.date | date: "%d" | plus:'0' %}
-	   {{ page.date | date: "%B" }} 
+	   {{ page.date | date: "%B" }}
 	   {% case d %}
 	     {% when 1 or 21 or 31 %}{{ d }}st,
 	     {% when 2 or 22 %}{{ d }}nd,
@@ -25,28 +25,28 @@
 		  <li><i class="fa fa-folder-open"></i></li>
 		  {% assign categories_list = page.categories %}
 		  {% if categories_list.first[0] == null %}
-			{% for category in categories_list %} 
+			{% for category in categories_list %}
 				<li><a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category }}-ref">
 					{{ category | join: "/" }} <span>({{ site.categories[category].size }})</span>
 					{% unless forloop.last %},{% endunless %}
 				</a></li>
 			{% endfor %}
 		  {% else %}
-			{% for category in categories_list %} 
+			{% for category in categories_list %}
 				<li><a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category[0] }}-ref">
 					{{ category[0] | join: "/" }} <span>/{{ category[1].size }})</span>
 				</a></li>
 			{% endfor %}
 		  {% endif %}
 		</ul>
-		{% endunless %}  
+		{% endunless %}
 
 		{% unless page.tags == empty %}
 		<ul class="list-inline">
 		  <li><i class="fa fa-tags"></i></li>
 		  {% assign tags_list = page.tags %}
 		  {% if tags_list.first[0] == null %}
-			{% for tag in tags_list %} 
+			{% for tag in tags_list %}
 				<li>
 					<a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag }}-ref">
 					{{ tag }} <span>({{ site.tags[tag].size }})</span>
@@ -55,22 +55,55 @@
 				</li>
 			{% endfor %}
 		  {% else %}
-			{% for tag in tags_list %} 
+			{% for tag in tags_list %}
 				<li>
 					<a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag[0] }}-ref">
 						{{ tag[0] }} <span>({{ tag[1].size }})</span>
 						{% unless forloop.last %},{% endunless %}
 					</a>
 				</li>
-		   	
+
 			{% endfor %}
 		  {% endif %}
 		  {% assign tags_list = nil %}
 		</ul>
-		{% endunless %}  
+		{% endunless %}
 
 		<hr>
 
+    <div style="
+    padding: 0 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 7px 0px #8a8aa8;">
+      <!-- Begin Mailchimp Signup Form -->
+      <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+        #mc_embed_signup .button {
+          background-color: #1C4B9B;
+        }
+        #mc_embed_signup .button:hover {
+          background-color: #080F21;
+        }
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+          We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      </style>
+      <div id="mc_embed_signup">
+      <form action="https://junjizhi.us10.list-manage.com/subscribe/post?u=6a0d3638ef5d4b3ca599f9247&amp;id=fde61d06fa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+        <h3 for="mce-EMAIL">Email Newsletter</h3>
+        <p style="font-size: normal; font-family: Arial;">I write about code and entrepreneurship. Sign up and get my updates straight to your inbox!</p>
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6a0d3638ef5d4b3ca599f9247_fde61d06fa" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </div>
+      </form>
+      </div>
+      <!--End mc_embed_signup-->
+    </div>
+    <br />
+    <br />
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
@@ -92,7 +125,7 @@
       </section>
 
       <section class="col-sm-6 author">
-        <img src="//www.gravatar.com/avatar/{{site.author.email_md5}}" class="img-rounded author-image" />
+          <img src="{{ site.BASE_PATH }}/assets/media/headshot.jpg" width="90px" class="img-rounded author-image" aria-label="Authored by Junji Zhi"/>
         <h4 class="section-title author-name">{{site.author.name}}</h4>
         <p class="author-bio">{{site.author.bio}}</p>
       </section>
@@ -104,20 +137,20 @@
 		  {% if page.previous %}
 		  <li class="previous"><a href="{{ site.BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
 		  {% else %}
-		  <li class="previous disabled"><a>&larr; Previous</a></li>
+		  <li class="previous"><a class="text-muted-high-contrast">&larr; Previous</a></li>
 		  {% endif %}
 		  {% if page.next %}
 		  <li class="next"><a href="{{ site.BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
 		  {% else %}
-			<li class="next disabled"><a>Next &rarr;</a>
+			<li class="next"><a class="text-muted-high-contrast">Next &rarr;</a></li>
 		  {% endif %}
 		</ul>
 
 		<hr>
 	</div>
-	
+
 	<div class="col-sm-2 sidebar-2">
-	
+
 	</div>
 </article>
 <div class="clearfix"></div>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta name="google-site-verification" content="a7U9ZxTuRW1SrcHDbgR_p-Yd4c2SXjT9LvHpP00-xJQ" />
 	<meta charset="utf-8">
 	<title>{{ page.title }}</title>
 	{% if page.description %}
@@ -13,14 +14,19 @@
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
 	<!-- Le styles -->
 	<link href="{{ site.BASE_PATH }}/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="{{ site.BASE_PATH }}/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="{{ site.BASE_PATH }}/assets/resources/syntax/syntax.css" rel="stylesheet">
-	<link href="{{ site.BASE_PATH }}/assets/css/style.css" rel="stylesheet">
+  <link href="{{ site.BASE_PATH }}/assets/css/style.css" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.BASE_PATH }}/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.BASE_PATH }}/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.BASE_PATH }}/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="{{ site.BASE_PATH }}/assets/favicon/site.webmanifest">
 
 	<!-- Le fav and touch icons -->
 	<!-- Update these with your own images
@@ -59,7 +65,7 @@
 			</a>
 			{% endif %}
 			<a class="navbar-brand" href="{{ site.BASE_PATH }}/">
-				<img src="//www.gravatar.com/avatar/{{site.author.email_md5}}?s=35" class="img-circle" />
+          <img src="{{ site.BASE_PATH }}/assets/media/junji-logo.png" width=35px" class="img-circle" alt="Junji's Blog Logo" />
 				{{ site.title }}
 			</a>
 		</div>
@@ -76,8 +82,8 @@
 
 	<!-- nav-menu-dropdown -->
 	<div class="btn-group hidden-xs" id="nav-menu">
-		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			<i class="fa fa-bars"></i>
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-label="Navigation menu">
+			<i class="fa fa-bars" aria-label="Hamburger menu icon"></i>
 		</button>
 		<ul class="dropdown-menu" role="menu">
 			<li><a href="{{ site.BASE_PATH}}/"><i class="fa fa-home"></i>Home</a></li>
@@ -89,16 +95,18 @@
 	</div>
 
 	<div class="col-sm-3 sidebar hidden-xs" style="{% if site.sidebar_background_image %}background: url({{site.sidebar_background_image}}) no-repeat !important;{% endif %}">
-		{% include sidebar.html %}
+    {% include sidebar.html %}
 	</div>
 
 	<div class="col-sm-9 col-sm-offset-3">
-		{{ content }}
+    <main>
+      {{ content }}
+    </main>
 
 		<footer>
 			<hr/>
 			<p>
-				&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; {{ site.time | date: '%Y' }} Junji Zhi with <a href="https://github.com/dbtek/dbyll">dbyll</a>.
 			</p>
 		</footer>
 	</div>

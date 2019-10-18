@@ -3,6 +3,53 @@ layout: page
 tagline:
 ---
 
+<div class="col-sm-3 col-xs-6">
+  <ul class="nav nav-tabs-vertical cat-tag-menu">
+    {% assign categories_list = site.categories %}
+    {% if categories_list.first[0] == null %}
+      {% for category in categories_list %}
+          <li>
+              <a href="#{{ category | replace:' ','-' }}-ref">
+                {{ category }} <span class="badge pull-right">{{ site.categories[category].size }}</span>
+             </a>
+          </li>
+      {% endfor %}
+    {% else %}
+      {% for category in categories_list %}
+          <li>
+              <a href="#{{ category[0] | replace:' ','-' }}-ref">
+                  {{ category[0] }} <span class="badge pull-right">{{ category[1].size }}</span>
+              </a>
+          </li>
+      {% endfor %}
+    {% endif %}
+    {% assign categories_list = nil %}
+  </ul>
+</div>
+<!-- Tab panes -->
+<div class="tab-content col-sm-9 col-xs-6">
+{% for category in site.categories %}
+  <div class="tab-pane" id="{{ category[0] | replace:' ','-' }}-ref">
+    <h2 style="margin-top: 0px">Posts in {{ category[0] | capitalize }}</h2>
+    <ul class="list-unstyled">
+      {% assign pages_list = category[1] %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if group == null or group == node.group %}
+            <li style="line-height: 35px;"><a href="{{ site.BASE_PATH }}{{node.url}}">{{node.title}}</a> <span class="text-muted-high-contrast">- {{ node.date | date: "%B %d, %Y" }}</span></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% assign pages_list = nil %}
+    </ul>
+  </div>
+{% endfor %}
+</div>
+
+<div class="clearfix"></div>
+
+<h2>Recent Posts</h2>
+
 {% for post in paginator.posts %}
 
 <article class="home">
@@ -19,9 +66,9 @@ tagline:
     {{ post.date | date: "%Y" }}
   </span>
 
-  <h2>
+  <h3>
     <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-  </h2>
+  </h3>
 
   <div>
     {% if post.fullview %}
@@ -41,34 +88,34 @@ tagline:
 {% endfor %}
 <hr/>
 
-<ul class="pager"> 
-
-  {% if paginator.previous_page %}
-  <li class="previous">
-    {% if paginator.previous_page == 1 %}
-    <a href="{{ site.BASE_PATH }}/">&larr; Newer</a>
-    {% else %}
-    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.previous_page }}">&larr; Newer</a>
-    {% endif %}
-  </li>
-  {% else %}
-  <li class="previous disabled">
-    <a>&larr; Newer</a>
-  </li>
-  {% endif %}
-  
-  <li>
-    <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  </li>
-
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.next_page }}">Older &rarr;</a>
-  </li>
-  {% else %}
-  <li class="next disabled">
-    <a>Older &rarr;</a>        
-  </li>
-  {% endif %}
-
-</ul>
+<div style="
+    padding: 0 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 7px 0px #8a8aa8;">
+      <!-- Begin Mailchimp Signup Form -->
+      <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+        #mc_embed_signup .button {
+          background-color: #1C4B9B;
+        }
+        #mc_embed_signup .button:hover {
+          background-color: #080F21;
+        }
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+          We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      </style>
+      <div id="mc_embed_signup">
+      <form action="https://junjizhi.us10.list-manage.com/subscribe/post?u=6a0d3638ef5d4b3ca599f9247&amp;id=fde61d06fa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+        <h3 for="mce-EMAIL">Email Newsletter</h3>
+        <p style="font-size: normal; font-family: Arial;">I write about code and entrepreneurship. Sign up and get my updates straight to your inbox!</p>
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6a0d3638ef5d4b3ca599f9247_fde61d06fa" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </div>
+      </form>
+      </div>
+      <!--End mc_embed_signup-->
+    </div>

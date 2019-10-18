@@ -14,7 +14,7 @@ body{
 
 .sidebar-header {
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 .sidebar-header .title{
 	letter-spacing: 3px;
@@ -26,15 +26,31 @@ body{
 	color: #fff;
 }
 
+a {
+  text-decoration: underline;
+  color: #154f82;
+}
+
 a.nav-link {
 	padding-bottom: 5px;
 	padding-top: 7px;
-	color: #aaa;
 }
+
 a.nav-link i{
 	font-size: 16px;
 }
-a.nav-link:hover { color: #777; }
+
+a:hover, a:focus, a:active {
+  color: #04070a;
+}
+
+a:active {
+  border: 1px dotted #04070a;
+}
+
+a:visited {
+  color:#800080;
+}
 
 #bio {
 	font-family: "Courier New", Courier, monospace;
@@ -82,7 +98,7 @@ article .share .gplus:hover {
 }
 
 .page-header {
-	color: #e74c3c;
+	color: #24292e;
 	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
 }
 
@@ -96,9 +112,12 @@ article{
 	margin-bottom: 40px;
 }
 
-.article_body{
+.article_body {
 	margin-top: 20px;
 	margin-bottom: 20px;
+  font-size: medium;
+  font-family: "Arial";
+  line-height: 1.6;
 }
 
 .post-date {
@@ -123,20 +142,32 @@ article.home h4,
 article.home h5,
 article.home h6 {
 	font-family: 'Ubuntu', sans-serif;
-	color: #f2756a;
+	color: #24292e;
 }
 
 article.home h1 a,
 article.home h2 a,
 article.home h3 a,
 article.home h4 a {
-	color: #f2756a;
+	color: #24292e;
 }
 article.home h1 a:hover,
 article.home h2 a:hover,
 article.home h3 a:hover,
 article.home h4 a:hover {
-	color: #e74c3c;
+	color: #2a6496;
+}
+
+article h2 {
+  font-size: 25px;
+}
+
+article h3 {
+  font-size: 20px;
+}
+
+article h4 {
+  font-size: 18px;
 }
 
 .author .author-image {
@@ -172,7 +203,7 @@ footer {
     border-radius: 4px 0 0 4px;
 }
 
-.badge { background: #F2756A; }
+.badge { background: #24292e; }
 
 #nav-menu{
     position: fixed;
@@ -189,3 +220,6 @@ ul.dropdown-menu>li>a>i.fa {
     width: 1.3em;
 }
 
+.text-muted-high-contrast {
+  color: #505050 !important;
+}

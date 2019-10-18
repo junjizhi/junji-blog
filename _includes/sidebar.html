@@ -1,63 +1,75 @@
 <!-- sidebar.html -->
-<header class="sidebar-header" role="banner">
-	<a href="{{ site.BASE_PATH }}/">
-		<img src="//www.gravatar.com/avatar/{{site.author.email_md5}}?s=150" class="img-circle" />
+<header class="sidebar-header" aria-label="Junji's Blog Logo">
+    <a href="{{ site.BASE_PATH }}/" aria-label="Junji's Blog. Click to go to the home page.">
+		  <img src="{{ site.BASE_PATH }}/assets/media/junji-logo.png" width="120px" class="img-circle" alt="Junji's Blog Logo"/>
 	</a>
-	<h3 class="title">
-        <a href="{{ site.BASE_PATH }}/">{{ site.title }}</a>
-    </h3>
+	<h3> Junji's Blog </h3>
 </header>
-
-{% if site.author.bio %}
-<div id="bio" class="text-center">
-	{{ site.author.bio }}
-</div>
-{% endif %}
 
 <div id="contact-list" class="text-center">
 	<ul class="list-unstyled list-inline">
-		{% if site.author.github %}
-		<li>
-			<a class="btn btn-default btn-sm" href="https://github.com/{{ site.author.github }}">
-				<i class="fa fa-github-alt fa-lg"></i>
-			</a>
-		</li>
-		{% endif %}
 		{% if site.author.twitter %}
 		<li>
-			<a class="btn btn-default btn-sm" href="https://twitter.com/{{ site.author.twitter }}">
+			<a class="btn btn-default btn-sm" href="https://twitter.com/{{ site.author.twitter }}" aria-label="Follow Junji on Twitter">
 				<i class="fa fa-twitter fa-lg"></i>
 			</a>
 		</li>
-		{% endif %}
+    {% endif %}
+
 		{% if site.author.email %}
 		<li>
-			<a class="btn btn-default btn-sm" href="mailto:{{ site.author.email }}">
+			<a class="btn btn-default btn-sm" href="mailto:{{ site.author.email }}" aria-label="Click to send Junji an email.">
 				<i class="fa fa-envelope fa-lg"></i>
 			</a>
 		</li>
 		{% endif %}
-	</ul>
-	<ul id="contact-list-secondary" class="list-unstyled list-inline">
+
 		{% if site.author.pinterest %}
 		<li>
 			<a class="btn btn-default btn-sm" href="https://pinterest.com/{{ site.author.pinterest }}">
 				<i class="fa fa-pinterest fa-lg"></i>
 			</a>
 		</li>
-		{% endif %}
+    {% endif %}
+
 		{% if site.author.linkedin %}
 		<li>
-			<a class="btn btn-default btn-sm" href="https://linkedin.com/in/{{ site.author.linkedin }}">
+			<a class="btn btn-default btn-sm" href="https://linkedin.com/in/{{ site.author.linkedin }}" aria-label="Follow Junji on LinkedIn">
 				<i class="fa fa-linkedin fa-lg"></i>
 			</a>
 		</li>
-		{% endif %}
+    {% endif %}
+
+    {% if site.author.github %}
 		<li>
-			<a class="btn btn-default btn-sm" href="{{ site.BASE_PATH }}/{{ site.rss_path }}">
-				<i class="fa fa-rss fa-lg"></i>
+			<a class="btn btn-default btn-sm" href="https://github.com/{{ site.author.github }}" aria-label="Junji's Github page">
+				<i class="fa fa-github-alt fa-lg"></i>
 			</a>
 		</li>
-	</ul>
+    {% endif %}
+  </ul>
 </div>
+<br />
+<!-- Begin Mailchimp Signup Form -->
+<div style="
+  align-items: center;
+  justify-content: center;
+  display: flex;
+">
+  <form action="https://junjizhi.us10.list-manage.com/subscribe/post?u=6a0d3638ef5d4b3ca599f9247&amp;id=fde61d06fa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div>
+      <div>
+        <label for="mce-EMAIL">Email: </label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+      </div>
+      <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6a0d3638ef5d4b3ca599f9247_fde61d06fa" tabindex="-1" value=""></div>
+      <div style="text-align: right;"><input type="submit" value="Subscribe" name="subscribe" class="button"></div>
+    </div>
+  </form>
+</div>
+<!--End mc_embed_signup-->
 <!-- sidebar.html end -->

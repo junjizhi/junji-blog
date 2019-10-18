@@ -1,31 +1,29 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
-paginate: 10 # pagination based on number of posts
+paginate: 5 # pagination based on number of posts
 paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
 highlighter: rouge
 markdown: kramdown
-disqus: dbyll
-google_analytics: dbyll
-title: dbyll
+disqus: blog-junjizhi-com
+google_analytics: UA-150349974-2
+title: Junji Zhi
 
 defaults:
   -
     scope:
       path: "" # empty string for all files
     values:
-      title: dbyll
+      title: Junji's Blog
 
-description: Stylish Jekyll Theme
+description: Junji's Blog
 author:
-  name: dbyll
-  email: dbyll@ismaildemirbilek.com
-  github: dbtek
-  twitter: dbtek
-  pinterest: asd123
-  linkedin: asd123
-  bio: Your stylish, minimalist theme!
-  email_md5: 726351295ec82e145928582f595aa3aa
+  name: Junji Zhi
+  email: contact@junjizhi.com
+  github: junjizhi
+  twitter: junjizhi
+  linkedin: junjizhi
+  bio: Senior Software Engineer.
 
 rss_path: feed.xml
 categories_path: categories.html
@@ -38,3 +36,5 @@ BASE_PATH:
 
 plugins:
   - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
