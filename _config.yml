@@ -5,7 +5,7 @@ paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
 highlighter: rouge
 markdown: kramdown
-disqus: disqus_PPx6CyGFUd
+disqus: blog-junjizhi-com
 google_analytics: UA-150349974-1
 title: Junji Zhi
 
