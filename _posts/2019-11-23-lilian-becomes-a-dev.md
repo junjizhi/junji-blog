@@ -109,7 +109,7 @@ Knowing that, I was particularly patient. And tried my best to use different way
 
 ## Web development bootcamp
 
-The part time course ended. Lilian couldn't wait to learn more. The natural next step was the web development bootcamp.
+The part time course ended. Lilian couldn't wait to learn more. The natural next step was the [web development bootcamp](https://junocollege.com/bootcamp/).
 
 To decide whether it's worth, I looked at the bootcamp intro page again. A few keywords stood up to me: immersive, best practices, high employment rate. 
 
