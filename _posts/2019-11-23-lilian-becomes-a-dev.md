@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My wife changed career to be a dev, and how I helped
-categories: [personal, experience]
+categories: [All, personal, experience]
 tags: [female developer, coding bootcamp, career change, woman in tech]
 fullview: true
 comments: true
