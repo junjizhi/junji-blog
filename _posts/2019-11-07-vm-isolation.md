@@ -3,7 +3,8 @@ layout: post
 title: VM Isolation in Xen and KVM
 categories: [All, research, vm]
 tags: [vm, xen, kvm, performance isolation]
-fullview: true
+fullview: false
+excerpt: This post is based on my research when I was a grad student. The post discusses some low level details about VM, Xen, KVM, CPU scheduling. For anyone who works in this field, it could be useful.
 comments: true
 ---
 
@@ -32,7 +33,7 @@ of scheduling: guest-level and VMM-level scheduling. In Xen, the scheduling
 entity is a guest VM while in KVM it is actually a process group . Below we discuss the VMM scheduler mechanisms and policy.
 
 #### Xen credit based CPU scheduler
-Xen uses a proportional [share based credit scheduler](http://wiki.xen.org/wiki/Credit Scheduler) for CPU allocation among VMs. The following bullet points summarize the Xen CPU scheduler:
+Xen uses a proportional [share based credit scheduler](http://wiki.xen.org/wiki/Credit_Scheduler) for CPU allocation among VMs. The following bullet points summarize the Xen CPU scheduler:
 
 - Administrators can specify a VM’s weight(relative) and cap(absolute). These two parameter apply to all vCPUs assigned to that VM. The
 smallest allocation unit is a timeslice or quantum (30ms by default. Note: Prior to Xen v4.2 this value is not change-able. In v4.2 and above, administrators can tune this value to adapt the system for latency-sensitive workloads.). At the end of each quantum, the scheduler picks a VM’s vCPU from the ready queue and allocates the next quantum. The scheduler accounts the cumulative quantum units (or credits) and allocates quantum in a way that each VM’s count is proportional to that VM’s weight, up to its cap. Since the scheduler is non-preemptive, the assigned will not be preempted unless the vCPU blocks, yields or runs out of its quantum.
@@ -60,7 +61,7 @@ A common practice of memory management in Xen is static partitioning. The VMM as
 
 However, the VMM tracks all guest updates to the page tables and makes sure that those updates do not violate the rules, including 1) no mapping other VM page frames, 2) no illegal change of privilege on the special pages(e.g., page table pages). Such functional isolation guarantees that the VM memory usage will not be interfered by other VMs. Also, this is a constrained model such that a VM’s idle memory cannot be used by other active VMs.
 
-Similar to Xen, KVM’s memory is often static partitioned. Although it is possible to overcommit the host memory with kernel paging/swapping, it is best practice to ensure a guest VM assigned memory less than the available physical memory. Overcommitting memory is [not recommended](https://access.redhat.com/documentation/en-US/Red Hat Enterprise Linux/6/html/Virtualization Administrati Virtualization-Tips and tricks-Overcommitting with KVM.html).
+Similar to Xen, KVM’s memory is often static partitioned. Although it is possible to overcommit the host memory with kernel paging/swapping, it is best practice to ensure a guest VM assigned memory less than the available physical memory. Overcommitting memory is not recommended.
 
 Note that there is an on-going effort to implement dynamic memory control in Xen Cloud Platform(XCP). Such a feature is implemented by ballooning [5]. In this model, each VM is guaranteed a minimum amount (i.e., reserve) of memory. A VMM can assign more host memory to a VM than its reserve by ”deflating” the balloon, when there is available memory. When the host is under pressure, it ”inflates” the balloon to reclaim the VM memory. 
 
