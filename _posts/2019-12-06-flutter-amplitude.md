@@ -7,6 +7,9 @@ fullview: false
 excerpt: Recently we ran into an issue of using Amplitude in Flutter. We had to jump through a few hoops to get Amplitude events working. Hopefully, by sharing our experience, the readers can avoid the mistakes we make.
 comments: true
 ---
+
+**Note: This article was written before we were aware of [Daivd's article](https://medium.com/flutter-community/how-to-track-screen-transitions-in-flutter-with-routeobserver-733984a90dea). For implementing page tracking, [RouteObserver class](https://api.flutter.dev/flutter/widgets/RouteObserver-class.html) is a better solution.** 
+
 Recently we ran into an issue of using [Amplitude](https://github.com/amplitude/Amplitude-Flutter) in Flutter. We had to jump through many hoops to get Amplitude events working. Hopefully, by sharing our experience, the readers can avoid the mistakes we make.
 
 The requirement is simple: When user goes to a page or opens a dialogue, we send an Amplitude event. This is helpful to understand user behaviour as well as makes it easier to know where the app crashes.
