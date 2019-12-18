@@ -77,8 +77,6 @@ In KVM, the design is similar but simpler: No driver domain is needed; Since KVM
 
 With such a driver delegation design, the IO scheduling policy and control mechanism is subject to the driver and the control domain. As discussed next, both Xen and KVM face the inaccurate resource accounting problems due to this design.
 
-With such a driver delegation design, the IO scheduling policy and control mechanism is subject to the driver and the control domain. As discussed next, both Xen and KVM face the inaccurate resource accounting problems due to this design.
-
 ### IO Task Boosting
 
 Since virtualization platforms are designed to host general purpose systems, users expect the systems to achieve good throughput or high utilization and low response latency. These two goals are usually conflicting. 
