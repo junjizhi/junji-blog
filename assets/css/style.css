@@ -99,8 +99,9 @@ article{
 .article_body{
 	margin-top: 20px;
 	margin-bottom: 20px;
-  font-size: 16px;
+  font-size: large;
   font-family: "Arial";
+  line-height: 1.6;
 }
 
 .post-date {
