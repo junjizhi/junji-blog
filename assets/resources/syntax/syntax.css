@@ -1,6 +1,8 @@
 .highlight pre {
   font-size: 16px;
   padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .highlight .hll { background-color: #ffffcc }
