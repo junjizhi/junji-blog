@@ -10,7 +10,7 @@ comments: true
 
 ## The Problem
 
-We found disprepencies between two datasets and go on a journey to fix those disprepencies. Also, we would like visualize disprepencies. 
+We found discrepencies between two datasets and go on a journey to fix those discrepencies. Also, we would like visualize our progress and alert us when production data is bad again. 
 
 Since we already have custom SQL to BigQuery, and we are already using Datadog, the idea is run the query every once a while and send the query results
 as custom metrics to Datadog. 
