@@ -8,6 +8,8 @@ excerpt: My solution for the link missing issue. The popular solution in Github 
 comments: true
 ---
 
+*UPDATE: If you are having issue with `libssl.1.0.0.dylib` instead of `libcrypto.1.0.0.dylib` (mind the difference), please try the solution in [Stackoverflow](https://stackoverflow.com/a/59184347/8175889): `brew switch openssl 1.0.2t`.*
+
 Recently, Homebrew drops OpenSSL v1.0 for v1.1. The popular [TagUI Github
 issue](https://github.com/kelaberetiv/TagUI/issues/86) suggests downgrading
 openssl to v1.0 because their stack hasn't support v1.1 yet. But that's not a
