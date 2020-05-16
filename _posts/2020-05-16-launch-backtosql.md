@@ -86,8 +86,8 @@ learned about SQL. It will close the knowledge gap between you (or your ORM) and
 Also, teaching an online course is a rewarding experience. It forces me to organize my thinking when explaining to others. As a result,
 my understanding about the subject is enhanced and deepened.
 
-If you have anything to say about this course, feel free to leave a note!
+If you are interested in SQL or this course, sign up at: [BackToSQL.com](https://backtosql.com/)
 
-Finally, stay tuned.
+Thank you for your read!
 
 
