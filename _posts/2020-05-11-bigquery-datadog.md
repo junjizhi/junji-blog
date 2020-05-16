@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Send BigQuery Query Results to Datadog?"
+title: "Send BigQuery Results to Datadog?"
 categories: [All]
 tags: [BigQuery, Datadog, Google Data Studio]
 fullview: false
