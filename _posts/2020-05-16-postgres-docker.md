@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Run Postgres in Docker with One Command"
+title: "Run Postgres in Docker with One Command"
 categories: [All]
 tags: [sql, postgres, docker]
 fullview: false
