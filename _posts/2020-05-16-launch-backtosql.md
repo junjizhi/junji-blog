@@ -8,7 +8,7 @@ excerpt: I'm trying the Indie Hackers route and teach a course about SQL!
 comments: true
 ---
 
-Recently I decided to go with the [Indie Hackers](https://www.indiehackers.com/) route and do my own thing. 
+Recently I decided to go with the [Indie Hackers](https://www.indiehackers.com/) route and do my own thing.
 
 I'm going to make an online course about SQL for engineers and analysts!
 
@@ -18,7 +18,7 @@ I'm going to make an online course about SQL for engineers and analysts!
 
 I've taught two Udemy courses before, one about [Blockchain / Ethereum](https://www.udemy.com/course/intro-to-ether/?referralCode=C2AF50D41F1723E474A5) and the other around [Flutter](https://www.udemy.com/course/flutter-intro/?referralCode=630D8FD5B4B2C0791B31) in Mandarin Chinese. So this is not my first time.
 
-However, I want to do things differently for this course: **Talk to customers before making the course!** 
+However, I want to do things differently for this course: **Talk to customers before making the course!**
 
 The goal is to gather enough feedback and tailor the course content for real users.
 
@@ -71,7 +71,7 @@ I'm currently working on the outline based on customer feedback. So things may c
 - Good indentation
 - SQL Linting
 
-### Last mile delivery (Bonus)
+**Last mile delivery (Bonus)**
 This section covers the tips and tricks to deliver the query results in an effective way.
 
 ## How do I build the landing page
