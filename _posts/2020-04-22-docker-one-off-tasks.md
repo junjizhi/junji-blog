@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Should we run database seed and migrations in Dockerfile?"
+title: "Should We Run Database Seed and Migrations In Dockerfile?"
 categories: [All Categories, Technical]
 tags: [docker, docker-compose, docker-compose up]
 fullview: false

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building an API To Import Data From Excel"
+title: "Building An API To Import Data From Excel"
 categories: [All Categories, Technical]
 tags: [Excel, excel import database, excel import, openpyxl, Excel vs CSV]
 fullview: false
