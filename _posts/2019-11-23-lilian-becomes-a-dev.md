@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My Wife Changed Career To Be A Dev, And How I Helped
-categories: [All Categories, Indie Hacking, Stories]
+categories: [All, Indie Hacking, Stories]
 tags: [female developer, coding bootcamp, career change, woman in tech]
 fullview: false
 excerpt: You would hear about her journey and how I helped as a partner. And the lessons learned along the way.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building An API To Import Data From Excel"
-categories: [All Categories, Technical]
+categories: [All, Technical]
 tags: [Excel, excel import database, excel import, openpyxl, Excel vs CSV]
 fullview: false
 excerpt: If you are building an Excel Importer service, this post covers my experience and lessons learned.

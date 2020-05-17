@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Run Postgres in Docker with One Command"
-categories: [All Categories, Technical]
+categories: [All, Technical]
 tags: [sql, postgres, docker]
 fullview: false
 excerpt: How to run Postgres in Docker without installing local postgres

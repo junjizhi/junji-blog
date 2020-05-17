@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Use Pandas for ETL: Experience and Practical Tips"
-categories: [All Categories, Technical]
+categories: [All, Technical]
 tags: [python, pandas, etl]
 fullview: false
 excerpt: This post talks about my experience of building a small scale ETL with Pandas. It also offers some hands-on tips that may help you build ETLs with Pandas.

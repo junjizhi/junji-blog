@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Send BigQuery Results to Datadog?"
-categories: [All Categories, Technical]
+categories: [All, Technical]
 tags: [BigQuery, Datadog, Google Data Studio]
 fullview: false
 excerpt: How I solved this problem with Google Data Studio
