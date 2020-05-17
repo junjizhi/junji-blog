@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "dyld: Library not loaded: /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib"
-categories: [All]
+categories: [All Categories, Technical]
 tags: [git, openssl]
 fullview: false
 excerpt: My solution for the link missing issue. The popular solution in Github isn't correct.

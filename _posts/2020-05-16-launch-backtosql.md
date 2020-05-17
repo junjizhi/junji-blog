@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Launching BackToSQL.com"
-categories: [All]
+categories: [All Categories, Indie Hacking]
 tags: [sql, database, backtosql.com, online course, teaching online]
 fullview: false
 excerpt: I'm trying the Indie Hackers route and teach a course about SQL!

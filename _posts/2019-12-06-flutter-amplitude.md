@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Provider + Rebuild + Navigator make it hard to implement tracking 
-categories: [All, Flutter]
+categories: [All Categories, Technical]
 tags: [flutter, amplitude, ios, mobile]
 fullview: false
 excerpt: Recently we ran into an issue of using Amplitude in Flutter. We had to jump through a few hoops to get Amplitude events working. Hopefully, by sharing our experience, the readers can avoid the mistakes we make.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Should we run database seed and migrations in Dockerfile?"
-categories: [All]
+categories: [All Categories, Technical]
 tags: [docker, docker-compose, docker-compose up]
 fullview: false
 excerpt: This answers the question about one-off tasks in Dockerfile

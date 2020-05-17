@@ -1,7 +1,7 @@
 ---
 layout: post
 title: VM Isolation in Xen and KVM
-categories: [All, research, vm]
+categories: [All Categories, Technical]
 tags: [vm, xen, kvm, performance isolation]
 fullview: false
 excerpt: This post is based on my research when I was a grad student. The post discusses some low level details about VM, Xen, KVM, CPU scheduling. For anyone who works in this field, it could be useful.
