@@ -77,3 +77,11 @@ the entire running environment which is setup properly for you.
 Also, because Docker is isolated from your local machine. You don't have to worry about messing with your other dependencies.
 
 Finally, you can run multiple versions of the Postgres easily with Docker. It is a matter of pulling the image with the right version tag.
+
+## Closing thoughts
+
+Hopefully you now know how simple it is to run Postgres in docker with one command.
+
+If you interested in learning more about Postgres or SQL, I'm [recording a course](http://blog.junjizhi.com/all/2020/05/16/launch-backtosql.html) about SQL. You can sign up at [BackToSQL.com](https://backtosql.com/).
+
+Thank you for your read!
