@@ -28,7 +28,7 @@ The command comes from [this site](https://www.saltycrane.com/blog/2019/01/how-r
 
 `--name my_postgres` is giving the container a name.
 
-`-v my_dbdata:/var/lib/postgresql/data` is using a Docker volume. You can view it as letting the docker container access a host directory.
+`-v my_dbdata:/var/lib/postgresql/data` is using a [Docker volume](https://docs.docker.com/storage/volumes/). You can view it as letting the docker container access a host directory.
 
 You can check the volume info with command:
 
